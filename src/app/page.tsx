@@ -208,7 +208,7 @@ export default function Home() {
                   私たちは単なる仲介者ではなく、真のパートナーとして、お客様の「次なるもの」を共に考え、実現へと導きます。信頼関係を基盤に、多様な価値観を尊重し、すべてのステークホルダーにとって価値ある選択肢を提供することで、社会に新たな風を吹き込みます。
                 </p>
                 <p className="text-gray-700 font-semibold leading-relaxed text-base sm:text-lg text-center md:text-left">
-                  Build What's Next —— <br className="md:hidden" />次の時代を担う価値の創造に、<br className="md:hidden" />私たちは挑戦し続けます。
+                  Build What&apos;s Next —— <br className="md:hidden" />次の時代を担う価値の創造に、<br className="md:hidden" />私たちは挑戦し続けます。
                 </p>
               </div>
             </div>
@@ -486,7 +486,7 @@ export default function Home() {
       <footer className="bg-gray-800 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
-            <p className="text-gray-400"> 2025 Soares Inc. All rights reserved.</p>
+            <p className="text-gray-400">&copy; 2025 Soares Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
