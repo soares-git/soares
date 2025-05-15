@@ -10,7 +10,7 @@ export default function Home() {
   const [displayCompanyText, setDisplayCompanyText] = useState("");
   const fullText = "Build What's Next";
   const companyText = "Soares Inc.";
-  const typingSpeed = 100; // タイピング速度（ミリ秒）
+  const typingSpeed = 50; // タイピング速度（ミリ秒）
   
   // タイピングアニメーションを実行
   useEffect(() => {
@@ -42,11 +42,11 @@ export default function Home() {
   const contactRef = useRef(null);
   
   // 各セクションが表示されているかどうかを確認
-  const isAboutInView = useInView(aboutRef, { once: true, amount: 0.3 });
-  const isServicesInView = useInView(servicesRef, { once: true, amount: 0.3 });
-  const isCompanyInView = useInView(companyRef, { once: true, amount: 0.3 });
-  const isPartnersInView = useInView(partnersRef, { once: true, amount: 0.3 });
-  const isContactInView = useInView(contactRef, { once: true, amount: 0.3 });
+  const isAboutInView = useInView(aboutRef, { once: true, amount: 0.1 });
+  const isServicesInView = useInView(servicesRef, { once: true, amount: 0.05 });
+  const isCompanyInView = useInView(companyRef, { once: true, amount: 0.1 });
+  const isPartnersInView = useInView(partnersRef, { once: true, amount: 0.1 });
+  const isContactInView = useInView(contactRef, { once: true, amount: 0.1 });
   
   // 各セクションのタイトルのフルテキスト
   const aboutFullText = "About us";
