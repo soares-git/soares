@@ -243,16 +243,73 @@ export default function Home() {
               </motion.span>
             )}
           </div>
+          
+          {/* サービス概要 */}
+          <div className="mb-12 text-center max-w-4xl mx-auto">
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              個人クリエイターから中小企業、大手法人まで、規模や業種を問わず多様なお客様のニーズにお応えします。SNSアカウントを運営する個人事業主の方から資産活用を検討される企業様、事業拡大を目指す法人様まで、それぞれの状況に合わせた最適なソリューションをご提案いたします。
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed font-medium">
+              一社一社に真摯に向き合い、独自のマッチング力とシナジー創出の強みを活かした価値提供を行います。
+            </p>
+            <div className="w-24 h-1 bg-blue-500 mx-auto mt-8 rounded-full"></div>
+          </div>
+          
           <div className="grid grid-cols-1 gap-8">
             {/* サービス1 */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 relative overflow-hidden">
-              <div className="relative z-10 pl-0 pr-[40%]">
-                <h3 className="text-xl font-bold mb-4">M&A仲介・事業承継</h3>
-                <p className="text-gray-700">
-                  デジタルアセットから実店舗まで、多様な事業承継をサポートします。SNSアカウント、ECサイト、不動産、飲食店など、あらゆる価値ある資産の売買をワンストップで実現。経営者様の想いを尊重しながら、次のステージへと橋渡しする専門チームが伴走します。
-                </p>
+              {/* スマホ表示時の上部画像 */}
+              <div className="block sm:hidden w-full h-48 mb-6 relative rounded-lg overflow-hidden">
+                <Image
+                  src="/service1.jpg"
+                  alt="M&A仲介事業"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="absolute right-0 top-0 w-2/5 h-full transform overflow-hidden">
+              <div className="relative z-10 pl-0 pr-0 sm:pr-[40%]">
+                <h3 className="text-2xl font-bold mb-4 text-blue-700 relative inline-block text-left">
+                  M&A仲介事業
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-full"></span>
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  多様な分野でのM&A仲介を専門としており、特にYouTubeチャンネルの売買において豊富な実績と専門知識を持っています。豊富なネットワークを活かした独自のマッチング力で、買い手と売り手の最適なマッチングを実現。取引後も長期的な視点でシナジーを生み出し、事業価値を高める連携をサポートします。
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">YouTubeチャンネル</p>
+                    <p className="text-gray-700 text-sm">
+                      クリエイターの資産価値を最大化し、買い手企業には収益性の高いメディア獲得の機会を提供。チャンネル評価から交渉、譲渡手続きまでワンストップでサポートします。
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">SNSアカウント</p>
+                    <p className="text-gray-700 text-sm">
+                      X（旧Twitter）やInstagramなどのアカウント売買をサポート。フォロワー数やエンゲージメント率、コンテンツの質などを総合的に評価し、適正価格での取引を実現します。
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">不動産・土地</p>
+                    <p className="text-gray-700 text-sm">
+                      投資価値の高い物件の発掘から、売却を検討されるオーナー様とのマッチングまで、専門知識を活かした仲介サービスを提供します。
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">事業承継・譲渡</p>
+                    <p className="text-gray-700 text-sm">
+                      後継者問題から新規事業展開まで、企業の未来を見据えた最適な譲渡プランをご提案。事業の強みを最大限に活かす買い手選定を行います。
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-3 rounded-md border-l-4 border-blue-500">
+                  <p className="text-gray-700 text-sm">
+                    <span className="font-semibold">当社の強み</span>は「繰り返しの取引」にあります。リピーターを増やすことでより広範なネットワークを構築し、全体的なシナジーを生み出します。M&A後の事業成長をサポートする実践的なマーケティング支援により、取引だけで終わらない継続的な価値創造を提供します。
+                  </p>
+                </div>
+              </div>
+              <div className="absolute right-0 top-0 w-2/5 h-full transform overflow-hidden hidden sm:block">
                 <div 
                   className="absolute inset-0"
                   style={{ 
@@ -261,7 +318,7 @@ export default function Home() {
                 >
                   <Image
                     src="/service1.jpg"
-                    alt="M&A仲介・事業承継"
+                    alt="M&A仲介事業"
                     fill
                     className="object-cover"
                   />
@@ -271,7 +328,16 @@ export default function Home() {
             
             {/* サービス2 */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 relative overflow-hidden">
-              <div className="absolute left-0 top-0 w-2/5 h-full transform overflow-hidden">
+              {/* スマホ表示時の上部画像 */}
+              <div className="block sm:hidden w-full h-48 mb-6 relative rounded-lg overflow-hidden">
+                <Image
+                  src="/service2.jpg"
+                  alt="SNS運用代行"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute left-0 top-0 w-2/5 h-full transform overflow-hidden hidden sm:block">
                 <div 
                   className="absolute inset-0"
                   style={{ 
@@ -280,29 +346,96 @@ export default function Home() {
                 >
                   <Image
                     src="/service2.jpg"
-                    alt="デジタル資産評価・運用"
+                    alt="SNS運用代行"
                     fill
                     className="object-cover"
                   />
                 </div>
               </div>
-              <div className="relative z-10 flex flex-col items-start justify-center pl-[40%] pr-0">
-                <h3 className="text-xl font-bold mb-4 text-left w-full">デジタル資産評価・運用</h3>
-                <p className="text-gray-700 text-left">
-                  SNS運用コンサルティングからWebメディア構築まで、デジタル資産の価値最大化をサポート。蓄積されたデータと経験に基づき、継続的な成長と収益化戦略を立案します。保有するデジタル資産の潜在価値を発掘し、長期的な資産形成をご提案します。
+              <div className="relative z-10 flex flex-col items-start justify-center pl-0 sm:pl-[40%] pr-0">
+                <h3 className="text-2xl font-bold mb-4 text-blue-700 relative inline-block text-left">
+                  SNS運用代行
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-full"></span>
+                </h3>
+                <p className="text-gray-700 text-left mb-4">
+                  YouTube、X（旧Twitter）、Instagramなど各種SNSプラットフォームの分析から戦略立案、コンテンツ制作まで一責した運用サポートを提供します。フォロワー数増加と収益化を強力に後押しします。M&A事業で培ったSNSアカウントの価値評価ノウハウを活かし、再生数や登録者数、エンゲージメント率などの定量的な指標だけでなく、ブランド力や将来性も含めた総合的な価値向上を目指します。
                 </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">YouTube</p>
+                    <p className="text-gray-700 text-sm">チャンネル戦略立案、コンテンツ企画・制作、視聴者分析を実施。アルゴリズムを理解したサムネイル設計や動画構成、SEO対策で再生数と登録者数の増加を実現します。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">X（旧Twitter）</p>
+                    <p className="text-gray-700 text-sm">アカウント運用戦略、ツイート設計、フォロワー獲得施策を実行。トレンドを捕らえたタイムリーな投稿とエンゲージメントを高めるコンテンツ設計で、影響力あるアカウントへと成長させます。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">Instagram</p>
+                    <p className="text-gray-700 text-sm">フィード・ストーリー・リール戦略、ビジュアルデザインの最適化。高品質な写真や動画制作、ハッシュタグ戦略、インフルエンサーマーケティングまで、視覆率とフォロワー数の増加を実現します。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">クロスプラットフォーム</p>
+                    <p className="text-gray-700 text-sm">複数SNSの連携運用、一責したブランディングを実現。各プラットフォームの特性を活かしたコンテンツ配分とリポスト戦略で、相互送客とオーディエンスの拡大を実現します。</p>
+                  </div>
+                </div>
+                
+
+                
+                <div className="bg-gray-50 p-3 rounded-md border-l-4 border-blue-500">
+                  <p className="text-gray-700 text-sm">
+                    当社のSNS運用は「単なる代行」ではなく、マーケティング戦略と資産価値向上を融合させた包括的なアプローチが特長です。M&A事業との連携により、アカウントの将来的な売却も視野に入れた価値最大化を実現します。
+                  </p>
+                </div>
               </div>
             </div>
             
             {/* サービス3 */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 relative overflow-hidden">
-              <div className="relative z-10 pl-0 pr-[40%]">
-                <h3 className="text-xl font-bold mb-4">システム開発・DX推進</h3>
-                <p className="text-gray-700">
-                  業務効率化から新規サービス創出まで、テクノロジーを活用した事業変革をサポート。お客様のビジョンを形にするWebアプリケーション開発、業務システム構築、AIソリューションの導入など、最新技術を駆使したDX推進を実現します。
-                </p>
+              {/* スマホ表示時の上部画像 */}
+              <div className="block sm:hidden w-full h-48 mb-6 relative rounded-lg overflow-hidden">
+                <Image
+                  src="/service3.jpg"
+                  alt="マーケティング支援"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="absolute right-0 top-0 w-2/5 h-full transform overflow-hidden">
+              <div className="relative z-10 pl-0 pr-0 sm:pr-[40%]">
+                <h3 className="text-2xl font-bold mb-4 text-blue-700 relative inline-block">
+                  マーケティング支援
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-full"></span>
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  企業の成長戦略に直結するマーケティング活動を包括的に支援します。M&A、SNS運用、システム開発の知見を活かした独自の視点で、従来の施策では得られない成果を実現。データに基づいた戦略立案から実行、効果測定までトータルにサポートし、持続的な事業成長を促進します。
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">マーケティング戦略策定</p>
+                    <p className="text-gray-700 text-sm">市場分析と競合調査に基づく差別化戦略の立案。顧客ニーズの深堀りとターゲット設定の最適化により、限られたリソースで最大の効果を実現します。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">デジタルマーケティング</p>
+                    <p className="text-gray-700 text-sm">SEO、リスティング広告、SNS広告などの戦略立案と運用。検索エンジン最適化と費用対効果の高い広告運用で、投資対効果を最大化します。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">コンテンツマーケティング</p>
+                    <p className="text-gray-700 text-sm">顧客の各段階に響くコンテンツ制作と信頼構築。認知から購入までの各フェーズに最適化されたコンテンツで、ブランドの一貫性を保ちながら共感と信頼を構築します。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">データ分析・DX</p>
+                    <p className="text-gray-700 text-sm">顧客データ管理と自動化施策、マーケティングROI最大化。ウェブ解析とCRMを活用した顧客行動の可視化と、データドリブンな意思決定で継続的な改善を実現します。</p>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-3 rounded-md border-l-4 border-blue-500">
+                  <p className="text-gray-700 text-sm">
+                    当社のマーケティング支援は、M&A事業で培った「価値創造」の視点と、SNS運用で磨いた「エンゲージメント向上」のノウハウを融合させた独自のアプローチが特長です。単発の施策ではなく、企業の成長ステージに合わせた包括的な戦略で、持続的な事業拡大を実現します。
+                  </p>
+                </div>
+              </div>
+              <div className="absolute right-0 top-0 w-2/5 h-full transform overflow-hidden hidden sm:block">
                 <div 
                   className="absolute inset-0"
                   style={{ 
@@ -311,7 +444,7 @@ export default function Home() {
                 >
                   <Image
                     src="/service3.jpg"
-                    alt="システム開発・DX推進"
+                    alt="マーケティング支援"
                     fill
                     className="object-cover"
                   />
@@ -321,7 +454,16 @@ export default function Home() {
             
             {/* サービス4 */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 relative overflow-hidden">
-              <div className="absolute left-0 top-0 w-2/5 h-full transform overflow-hidden">
+              {/* スマホ表示時の上部画像 */}
+              <div className="block sm:hidden w-full h-48 mb-6 relative rounded-lg overflow-hidden">
+                <Image
+                  src="/service4.jpg"
+                  alt="システム開発・WEB制作"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute left-0 top-0 w-2/5 h-full transform overflow-hidden hidden sm:block">
                 <div 
                   className="absolute inset-0"
                   style={{ 
@@ -330,17 +472,45 @@ export default function Home() {
                 >
                   <Image
                     src="/service4.jpg"
-                    alt="ホスピタリティ事業運営"
+                    alt="システム開発・WEB制作"
                     fill
                     className="object-cover"
                   />
                 </div>
               </div>
-              <div className="relative z-10 flex flex-col items-start justify-center pl-[40%] pr-0">
-                <h3 className="text-xl font-bold mb-4 text-left w-full">ホスピタリティ事業運営</h3>
-                <p className="text-gray-700 text-left">
-                  飲食店運営のノウハウを活かし、ホスピタリティ事業の立ち上げから運営までをトータルサポート。コンセプト設計、店舗開発、スタッフ教育、収益管理まで、成功に導くためのすべてのプロセスを伴走します。実業とデジタルの両面から、次世代の顧客体験を創造します。
+              <div className="relative z-10 flex flex-col items-start justify-center pl-0 sm:pl-[40%] pr-0">
+                <h3 className="text-2xl font-bold mb-4 text-blue-700 relative inline-block text-left">
+                  システム開発・WEB制作
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-full"></span>
+                </h3>
+                <p className="text-gray-700 text-left mb-4">
+                  企業のデジタル戦略をサポートするシステム開発からWebサイト構築、効果的なランディングページ制作まで、ビジネス成長に必要なデジタルソリューションをご提供します。他事業で培った「価値創造」と「マッチング」のノウハウを活かし、単なる制作に留まらない事業成果に直結するシステム・サイト構築を実現します。
                 </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">Webサイト制作</p>
+                    <p className="text-gray-700 text-sm">企業の強みを最大限に引き出すデザインと構成、SEO対策を含めた総合的なWebブランディング。モバイルファースト設計と高速読み込みを実現し、ユーザー体験を向上させます。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">ランディングページ制作</p>
+                    <p className="text-gray-700 text-sm">コンバージョン率を最大化する高度なマーケティング視点でのLP設計。心理学に基づくデザインとA/Bテストによる継続的な改善で、収益向上に貢献します。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">業務効率化システム</p>
+                    <p className="text-gray-700 text-sm">社内プロセスの分析から最適なシステム設計、使いやすいインターフェースの実現。業務の自動化とデータの一元管理により、人的リソースを本来の価値创造業務に集中させます。</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="font-medium text-gray-800 mb-1">フロントエンド・バックエンド一括開発</p>
+                    <p className="text-gray-700 text-sm">UI/UXからデータベース設計まで一貫した開発体制。技術スタックの最適化と連携強化により、高品質なシステムを効率的に構築します。</p>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-3 rounded-md border-l-4 border-blue-500">
+                  <p className="text-gray-700 text-sm">
+                    当社のシステム開発・WEB制作は「ワンストップソリューション」の強みを活かし、企画・設計から開発・運用までトータルでサポート。他事業とのシナジーを生かした独自の視点で、競合との差別化を実現する戦略的なデジタルソリューションを提供します。
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -376,7 +546,7 @@ export default function Home() {
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-3 font-semibold w-1/3 sm:w-1/4">設立</td>
-                      <td className="py-3">2025年5月11日(登記予定日)</td>
+                      <td className="py-3">2025年5月14日</td>
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-3 font-semibold w-1/3 sm:w-1/4">代表取締役</td>
@@ -396,7 +566,7 @@ export default function Home() {
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-3 font-semibold w-1/3 sm:w-1/4">事業内容</td>
-                      <td className="py-3">M&A仲介・事業承継、デジタル資産評価・運用、システム開発・DX推進、ホスピタリティ事業運営</td>
+                      <td className="py-3">M&A仲介事業、SNS運用代行、マーケティング支援、システム開発・WEB制作</td>
                     </tr>
                   </tbody>
                 </table>
