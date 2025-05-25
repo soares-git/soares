@@ -565,6 +565,10 @@ export default function Home() {
                       <td className="py-3">準備中</td>
                     </tr>
                     <tr className="border-b border-gray-200">
+                      <td className="py-3 font-semibold w-1/3 sm:w-1/4">法人番号</td>
+                      <td className="py-3">3010001255110</td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
                       <td className="py-3 font-semibold w-1/3 sm:w-1/4">事業内容</td>
                       <td className="py-3">M&A仲介事業、SNS運用代行、マーケティング支援、システム開発・WEB制作</td>
                     </tr>
